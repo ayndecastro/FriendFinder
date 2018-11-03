@@ -1,6 +1,9 @@
 const express = require('express');
 const bodyParser = require("body-parser");
 
+console.log("server connected");
+
+
 const app = express();
 
 let PORT = process.env.PORT || 1308;

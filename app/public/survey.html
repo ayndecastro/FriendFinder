@@ -143,13 +143,14 @@
     </form>
     <footer>
         <span><a href="/api/friends">API Friend List</a> | </span>
-        <span><a href="https://github.com/mchlltt/friend-finder">GitHub Repository</a></span>
+        <span><a href="https://github.com/ayndecastro/FriendFinder">GitHub Repository</a></span>
     </footer>
 
     <!-- modal -->
-    <div class="modal">
+    <div class="modal" id="modal">
         <h3>Your Match!</h3>
-        <img class="matchPhoto" width="650" src="">
+        <h4 class="friendName"></h4>
+        <img class="friendImage" width="650" src="">
         <button>X</button>
     </div>
 
@@ -160,11 +161,14 @@
         crossorigin="anonymous"></script>
     <!-- js -->
     <script type="text/javascript">
+
     console.log('hello');
 $(document).ready(function() {
 
+    // $('select').material_select();
     $(".submit").on("click", function(event){
         event.preventDefault();
+        
 
         let surveyee = {
             name: $(".name").val().trim(),
@@ -185,8 +189,11 @@ $(document).ready(function() {
 
         $.post("api/friends", surveyee, function(data){
             // console.log(data);
-            $(".modal").append(data);
-            $(".modal").modal('open')
+            $(".friendName").text(data.friendName);
+            $(".friendImage").attr("src", data.friendImage);
+
+            $("#modal").modal("toggle")
+            
         })
     })
 
