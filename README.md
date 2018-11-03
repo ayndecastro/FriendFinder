@@ -5,4 +5,7 @@
     -The app uses Node.js and Express server on the backend and boostrap for css styling.
     
   # Demo
-    - Click [ ** here **](https://secret-island-76490.herokuapp.com/) to checkout a demo of the Friend Finder app, that is deployed on Heroku.
+   Click [here](https://secret-island-76490.herokuapp.com/) to checkout a demo of the Friend Finder app, that is deployed on Heroku.
+   
+   
+    
