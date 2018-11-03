@@ -13,7 +13,7 @@ module.exports = function(app){
         surveyee = {
             name: req.body.name,
             image: req.body.image,
-            answer: []
+            answer: req.body.answer
           };
 
         // console.log(surveyee);
