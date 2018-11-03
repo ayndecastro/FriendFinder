@@ -28,7 +28,7 @@ module.exports = function(app){
             // console.log(friendsSurveyData[i])
             // console.log(JSON.stringify(friendsSurveyData[i]));
 
-            let difference;
+            let difference = 0;
                 let answerForLoop = surveyee.answer;
             for(x=0; x < answerForLoop.length; x++){
                 difference +=Math.abs(friendsSurveyData[i].answer[x] - answerForLoop[x])
