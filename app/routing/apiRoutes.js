@@ -35,7 +35,7 @@ module.exports = function(app){
             }
 
             if(difference < totalDifference){
-                totalDiff = difference;
+                totalDifference = difference;
                 friendName = friendsSurveyData[i].name;
                 friendImage = friendsSurveyData[i].image;
             }
